@@ -988,4 +988,3 @@ logpath = /var/log/monitorix-httpd
 [dante]
 port    = 1080
 logpath = %(syslog_daemon)s
-
