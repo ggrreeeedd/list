@@ -278,7 +278,7 @@ logpath  = /var/log/messages
 maxretry = 3
 bantime  = -1
 findtime = 600000
-action = hostsdeny
+action = iptables[name=SSH, port=ssh, protocol=tcp]
 
 
 [dropbear]
