@@ -272,14 +272,13 @@ action = %(action_)s
 
 [sshd]
 enabled  = true
-port     = ssh
+port     = 444
 filter   = sshd
 logpath  = /var/log/messages
 maxretry = 3
 bantime  = -1
-findtime = 600000
-action = iptables[name=SSH, port=ssh, protocol=tcp]
-
+findtime = 60000
+action   = iptables[name=SSH, port=444, protocol=tcp]
 
 [dropbear]
 
@@ -988,3 +987,5 @@ logpath = /var/log/monitorix-httpd
 [dante]
 port    = 1080
 logpath = %(syslog_daemon)s
+
+
